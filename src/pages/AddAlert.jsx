@@ -13,7 +13,7 @@ const AddAlert = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch("https://stock-tracker-ruby.vercel.app/api/alerts", {
+      const res = await fetch("http://34.235.157.206:3010/api/alerts/AAPL", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, symbol, targetPrice }),
