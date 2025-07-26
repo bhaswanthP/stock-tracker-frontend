@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 //const API_URL = "http://localhost:3010/api/alerts";
-const API_URL = "http://34.235.157.206:3010/api/alerts/AAPL";
+const API_URL = "http://34.235.157.206:3010/api/alerts";
 
 const Dashboard = () => {
   const navigate = useNavigate();
