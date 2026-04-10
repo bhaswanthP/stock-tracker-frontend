@@ -48,7 +48,7 @@ const Dashboard = () => {
           <p className="text-center text-gray-600">No alerts set.</p>
         ) : (
           <ul className="bg-white shadow-md rounded-lg p-4">
-            {alerts.map((alert) => (
+            {[...alerts].reverse().map((alert) => (
               <li
                 key={alert._id}
                 className="p-3 border-b last:border-none flex justify-between items-center"
