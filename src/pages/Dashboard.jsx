@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 //const API_URL = "http://localhost:3010/api/alerts";
-// const API_URL = "https://stock-tracker-ruby.vercel.app/api/alerts";
-const API_URL = "https://stocx-tracker.onrender.com/api/alerts";
+const API_URL = "https://stock-tracker-ruby.vercel.app/api/alerts";
+const API_URL_RENDER = "https://stocx-tracker.onrender.com/api/alerts";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -27,6 +27,12 @@ const Dashboard = () => {
       console.error("Error fetching alerts:", error);
     } finally {
       setLoading(false);
+    }
+
+    try {
+      const res = await fetch(API_URL_RENDER);
+    } catch(error) {
+      console.error('Error fetching alerts: ', error);
     }
   };
 
