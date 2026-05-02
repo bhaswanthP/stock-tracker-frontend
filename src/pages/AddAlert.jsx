@@ -13,7 +13,7 @@ const AddAlert = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch("https://stocx-tracker.onrender.com/api/alerts", {
+      const res = await fetch('https://stock-tracker-springboot-production.up.railway.app/api/alerts', {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, symbol, targetPrice }),
